@@ -19,7 +19,7 @@ export default function Home() {
 
   const fetchData = async (city) => {
     try {
-      const response = await fetch(`http://localhost:3000/api?city=${city}`);
+      const response = await fetch(`/api?city=${city}`);
       const data = await response.json();
       setWeatherData(data);
       console.log(data);
