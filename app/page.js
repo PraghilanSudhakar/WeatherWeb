@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex flex-col min-h-screen pb-32">
+      <div className="flex flex-col min-h-screen pb-28">
         <div className="mb-3.5">
           <Navbar
             setMetric={setMetric}

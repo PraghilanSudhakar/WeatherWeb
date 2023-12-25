@@ -4,7 +4,7 @@ import {
   Command,
   CommandInput,
   CommandList,
-  CommandDialog,
+  CommandDialog
 } from "@/components/ui/command";
 
 import cities from "./cities.json";

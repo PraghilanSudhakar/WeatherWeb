@@ -6,17 +6,16 @@ import {
   WiFog,
   WiDaySunnyOvercast,
 } from "weather-icons-react";
-import { useTheme } from "next-themes"; // Assuming you're using next-themes
+import { useTheme } from "next-themes";
 
 export const Icon = (props) => {
   let weatherData = props.weatherData;
-  const { theme } = useTheme(); // Get the current theme
+  const { resolvedTheme } = useTheme(); 
 
-  const iconColor = theme === "dark" ? "#fff" : "#000"; // Set the color based on the theme
+  const iconColor = resolvedTheme === "dark" ? "#fff" : "#000"; 
 
   const renderWeatherIcon = () => {
-    const iconSize = "20rem"; // Adjust as needed
-
+    const iconSize = "20rem";
     if (weatherData.current.condition.text.toLowerCase() == "partly cloudy") {
       return <WiCloudy size={iconSize} color={iconColor} />;
     } else if (weatherData.current.condition.text.toLowerCase() == "sunny") {
