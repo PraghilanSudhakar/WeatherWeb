@@ -32,7 +32,7 @@ export default function Navbar(props) {
           <Label>Metric</Label>
           <Switch onCheckedChange={toggleMetric}></Switch>
         </div>
-        <Link href="https://github.com">
+        <Link href="https://github.com/PraghilanSudhakar/WeatherWeb">
           <Button>GitHub</Button>
         </Link>
       </div>
