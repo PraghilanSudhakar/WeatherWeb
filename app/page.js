@@ -28,14 +28,13 @@ export default function Home() {
     }
   };
 
-  
   useEffect(() => {
     fetchData(value);
   }, [value]);
 
   return (
     <>
-      <div className="flex flex-col min-h-screen pb-4">
+      <div className="flex flex-col min-h-screen pb-32">
         <div className="mb-3.5">
           <Navbar
             setMetric={setMetric}
@@ -49,10 +48,7 @@ export default function Home() {
           <div className="col-span-1 grid grid-cols-1 gap-4">
             <Humidity weatherData={weatherData} metric={metric} />
             <Pressure weatherData={weatherData} metric={metric} />
-            <AirPollution
-
-              weatherData={weatherData}
-            />
+            <AirPollution weatherData={weatherData} />
           </div>
           <div className="sm:col-span-2 md:col-span-1 flex flex-col items-center justify-center space-y-9">
             <CurrentWeather
@@ -63,12 +59,9 @@ export default function Home() {
             <Icon weatherData={weatherData} />
           </div>
           <div className="col-span-1 grid grid-cols-1 gap-4">
-            <WindSpeed  weatherData={weatherData} metric={metric} />
-            <Visibility
-              weatherData={weatherData}
-              metric={metric}
-            />
-            <UVIndex  weatherData={weatherData} />
+            <WindSpeed weatherData={weatherData} metric={metric} />
+            <Visibility weatherData={weatherData} metric={metric} />
+            <UVIndex weatherData={weatherData} />
           </div>
         </div>
       </div>

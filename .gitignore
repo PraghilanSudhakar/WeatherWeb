@@ -39,3 +39,6 @@ next-env.d.ts
 sw.*
 workbox-*
 swe-worker-*
+
+# vscode
+.vscode
